@@ -176,6 +176,30 @@ header {
 }
 
 
+/* Page Info Show */
+#image-container img{
+ border-radius: 10px;
+}
+
+.info-container ion-icon{
+font-size:20px;
+color:#f2a340;
+margin-right:4px;
+}
+
+.info-container p{
+    /* margin-bottom: 0; */
+}
+
+#items{
+ list-style: none;
+ padding-left: 0;
+}
+#items li{
+display:flex;
+}
+
+
 /* Footer */
 footer {
     text-align: center;
@@ -187,16 +211,6 @@ footer {
     width: 100%;
 }
 
-/* Page Info Show */
-#image-container img{
- border-radius: 10px;
-}
-
-.info-container ion-icon{
-font-size:20px;
-color:#f2a340;
-margin-right:4px;
-}
 
 footer {
     margin-bottom: 0;

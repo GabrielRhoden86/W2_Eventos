@@ -29,6 +29,7 @@ class EventController extends Controller
         $event->city = $request->city;
         $event->private = $request->private;
         $event->description = $request->description;
+        $event->items = $request->items;
 
         // File Image
         if ($request->hasFile("image") && $request->file("image")->isValid()) {
@@ -39,7 +40,6 @@ class EventController extends Controller
             $requestImage->move(public_path('img/events'), $imageName);
             $event->image = $imageName;
         }
-
 
         $event->save();
 
