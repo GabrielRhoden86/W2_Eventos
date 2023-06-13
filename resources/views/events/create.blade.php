@@ -14,6 +14,10 @@
             <div class="form-group">
                 <input type="text" class="form-control" id="title" name="title" placeholder="Nome do Evento">
             </div>
+            <div class="form-group d-flex">
+                <small class="d-flex flex-column justify-content-center p-1">Data:</small>
+                <input type="datetime-local" class="form-control" id="date" name="date">
+            </div>
             <div class="form-group">
                 <input type="text" class="form-control" id="city" name="city" placeholder="Nome do Cidade">
             </div>

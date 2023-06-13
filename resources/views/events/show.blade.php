@@ -10,7 +10,8 @@
   <div class="info-container col-md-6">
     <h1>{{$event->title}}</h1>
     <p class="event-city"><ion-icon name="location-outline"></ion-icon>{{$event->city}}</p>
-    <p class="event-participants"><ion-icon name="people-outline"></ion-icon>X Participantes</p>
+    <p class=""><ion-icon name="calendar"></ion-icon>{{$event->date}}</p>
+    <p class="event-participants"><ion-icon name="people-outline"></ion-icon>200 Participantes</p>
     <p class="event-owner"><ion-icon name="star-outline"></ion-icon>Dono do Evento</p>
     <a href="" class="btn btn-primary" id="event-primary">Confirmar Presença</a>
     <h4 class="mt-3">Evento conta com:</h4>
