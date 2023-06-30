@@ -4,11 +4,11 @@
 
 
     <div id="event-creat-container" class="col-md-6 offset-md-3">
-        <h3>Crie seu evento</h3>
         <form action="/events" method="POST" enctype="multipart/form-data">
+            <h3 class="text-center">Crie seu evento</h3>
             @csrf
-            <div class="mb-3">
-                <label for="image">Imagem do evento:</label>
+            <div class="mb-3 ">
+                <label for="image" class="text-muted">Imagem do evento:</label>
                 <input type="file" id="image" name="image" class="form-control-file">
             </div>
             <div class="form-group">
@@ -31,7 +31,7 @@
                 <textarea name="description" id="description" class="form-control" placeholder="O que vai acontecer no Evento?"></textarea>
             </div>
             <div class="form-group">
-                <label for="title">Adicione os items da infraestrutura</label>
+                <label for="title" class="text-muted">Adicione os items da infraestrutura</label>
                 <div class="form-group">
                     <input type="checkbox" name="items[]" value="cadeiras"> Cadeira
                 </div>

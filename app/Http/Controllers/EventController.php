@@ -9,12 +9,24 @@ class EventController extends Controller
 {
     public function index()
     {
+        $search = request("search");
 
-        $events = Event::all();
+        if ($search) {
 
-        return view('welcome', ["events" => $events]);
+            $events = Event::where([["title", "like", "%" . $search . "%"]])->get();
+
+        } else {
+
+            $events =   Event::all();
+        }
+
+        return view('welcome', ["events" => $events, "search" => $search]);
     }
 
+    public function contact()
+    {
+        return view('contato');
+    }
 
     public function create()
     {
@@ -32,12 +44,12 @@ class EventController extends Controller
         $event->description = $request->description;
         $event->items = $request->items;
 
-        // File Image
+        // Validação imagem File Image
         if ($request->hasFile("image") && $request->file("image")->isValid()) {
 
             $requestImage = $request->image;
             $extension = $requestImage->extension();
-            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")).".".$extension;
+            $imageName = md5($requestImage->getClientOriginalName() . strtotime("now")) . "." . $extension;
             $requestImage->move(public_path('img/events'), $imageName);
             $event->image = $imageName;
         }
@@ -45,13 +57,15 @@ class EventController extends Controller
         $event->save();
 
         //Retorna Para Home
-        return redirect("/")->with('msg', "Evento criado com sucesso!");
+        return redirect("/")->with('msg', true);
     }
 
-    public function show($id){
-
+    public function show($id)
+    {
         $event = Event::findOrFail($id);
 
-        return view("events.show", ["event"=>$event]);
+        return view("events.show", ["event" => $event]);
+
+
     }
 }

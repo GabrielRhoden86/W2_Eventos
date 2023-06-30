@@ -102,11 +102,29 @@ header {
 }
 
 #events-container .card {
-    min-width:24% !important;
-    border-radius: 10px;
+    min-width:240px !important;
+    max-width:305px !important;
+    border-radius:5px;
     padding: 0;
-    margin:.5%;
+    margin:.8%;
+    margin-bottom:20px;
 }
+
+#cards-container{
+    display: flex;
+    justify-content:start;
+    background-color:white;
+    border-radius:10px;
+padding:2%;
+}
+@media screen and (max-width: 564px) {
+    /* coloque aqui as regras css para telas menores que 565px */
+    #cards-container{
+        display: flex;
+        justify-content:center;
+    }
+  }
+
 
 #events-container img {
     max-height: 190px;
@@ -129,8 +147,8 @@ header {
 .card {
     background-color: white;
     border: none !important;
-    -webkit-box-shadow: 8px 9px 4px -3px rgba(0,0,0,0.36);
-    box-shadow: 8px 9px 4px -3px rgba(0,0,0,0.36);
+    -webkit-box-shadow: 8px 9px 4px -3px rgba(48, 47, 47, 0.36);
+    box-shadow: 8px 9px 4px -3px rgba(65, 65, 65, 0.36);
 }
 
 .card-participants {
@@ -173,6 +191,10 @@ header {
     font-weight: bold;
 }
 
+#event-creat-container h3 {
+  color:#EA772D;
+}
+
 #event-creat-container input,
 #event-creat-container select,
 #event-creat-container textarea {
@@ -203,7 +225,6 @@ margin-right:4px;
 display:flex;
 }
 
-
 /* Footer */
 footer {
     text-align: center;
@@ -219,3 +240,6 @@ footer {
 footer {
     margin-bottom: 0;
 }
+
+
+
