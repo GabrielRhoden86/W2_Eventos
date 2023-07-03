@@ -4,7 +4,7 @@
 
 
     <div id="event-creat-container" class="col-md-6 offset-md-3">
-        <form action="/events" method="POST" enctype="multipart/form-data">
+        <form action="/events" method="POST" enctype="multipart/form-data" id="form-create-event">
             <h3 class="text-center">Crie seu evento</h3>
             @csrf
             <div class="mb-3 ">

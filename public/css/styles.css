@@ -5,24 +5,6 @@
     /* border:solid red 1px; */
 }
 
-.alert-success {
-    border-radius: 0px !important;
-}
-
-.alert-success span{
-    animation: 1.2s slide-left;
-}
-
-@keyframes slide-left {
-    from {
-        margin-left: 80%;
-    }
-
-    to {
-        margin-left: -1%;
-    }
-}
-
 body {
     min-height: 100vh;
     padding-bottom: 100px;
@@ -115,7 +97,7 @@ header {
     justify-content:start;
     background-color:white;
     border-radius:10px;
-padding:2%;
+    padding:2%;
 }
 @media screen and (max-width: 564px) {
     /* coloque aqui as regras css para telas menores que 565px */
@@ -124,7 +106,6 @@ padding:2%;
         justify-content:center;
     }
   }
-
 
 #events-container img {
     max-height: 190px;
@@ -177,18 +158,18 @@ padding:2%;
 }
 
 #event-creat-container form {
-    background-color: white;
-    padding: 15px;
-    border-radius: 10px;
+ background-color: white;
+ padding: 15px;
+ border-radius: 10px;
 }
 
 #event-creat-container h3 {
-    color: #414141;
-    padding: 0;
+ color: #414141;
+ padding: 0;
 }
 
 #event-creat-container label {
-    font-weight: bold;
+ font-weight: bold;
 }
 
 #event-creat-container h3 {
@@ -198,47 +179,70 @@ padding:2%;
 #event-creat-container input,
 #event-creat-container select,
 #event-creat-container textarea {
-    font-size: 12px;
+ font-size: 12px;
 }
 
-
 /* Page Info Show */
+.container-show{
+ margin-top:2%;
+}
+
+#image-container{
+ width:100px !important;
+}
+
 #image-container img{
  border-radius: 10px;
 }
 
 .info-container ion-icon{
-font-size:20px;
-color:#f2a340;
-margin-right:4px;
+ font-size:20px;
+ color:#f2a340;
+ margin-right:4px;
+ margin-bottom:-3px;
 }
 
 .info-container p{
-    /* margin-bottom: 0; */
+ margin-bottom:4px;
 }
 
 #items{
  list-style: none;
  padding-left: 0;
 }
+
+#event-primary{
+ margin-top:2%;
+}
+
 #items li{
 display:flex;
 }
 
-/* Footer */
-footer {
-    text-align: center;
-    background-color: #353E48;
-    color: #fff;
-    padding: 30px;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+/*Dashboard*/
+
+.dashboard-title-container{
+    margin-top:1%;
+    margin-bottom:1%;
 }
 
+.dashboard-events-container th{
+    width:25%;
+}
+
+/* Footer */
+footer {
+ text-align: center;
+ background-color: #353E48;
+ color: #fff;
+ padding: 30px;
+ position: absolute;
+ bottom: 0;
+ width: 100%;
+}
 
 footer {
-    margin-bottom: 0;
+ margin-bottom: 0;
 }
 
 

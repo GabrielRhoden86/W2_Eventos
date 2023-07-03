@@ -24,9 +24,13 @@
                     <li class="nav-item">
                         <a href="/" class="nav-link">Eventos</a>
                     </li>
+
                     <li class="nav-item">
                         <a href="/events/create" class="nav-link">Criar Eventos</a>
                     </li>
+                    {{-- <li class="nav-item">
+                        <a href="/contato" class="nav-link">Contato</a>
+                    </li> --}}
                     @auth
                     <li class="nav-item">
                         <a href="/dashboard" class="nav-link">Meus Eventos</a>
@@ -57,13 +61,17 @@
             <div class="row">
                 @if (session('msg'))
                     <script>
+                     function sweetAlert(){
                         Swal.fire({
                             title: "Evento Criado Com Sucesso !",
                             text: "Verifique os detalhes abaixo",
                             icon: 'success',
                             confirmButtonText: 'Ok'
                         });
+                      }
+                      sweetAlert();
                     </script>
+                     {{session('msg') == false}}
                 @endif
                 @yield('content')
             </div>
