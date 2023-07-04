@@ -55,11 +55,10 @@ class EventController extends Controller
 
         $user = auth()->user();
         $event->user_id = $user->id;
-
         $event->save();
 
         //Retorna Para Home
-        return redirect("/")->with('msg' );
+        return redirect("/")->with('msg', true);
     }
 
     public function show($id)
@@ -70,9 +69,13 @@ class EventController extends Controller
     }
 
     public function dashboard(){
-
         $user = auth()->user();
         $events = $user->events;
         return view('events.dashboard', ['events'=>$events]);
+    }
+
+    public function destroy($id){
+        $event = Event::findOrFail($id)->delete();
+        return redirect("/dashboard")->with('msg', true);
     }
 }

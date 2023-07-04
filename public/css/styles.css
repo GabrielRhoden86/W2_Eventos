@@ -226,9 +226,16 @@ display:flex;
     margin-bottom:1%;
 }
 
+.dashboard-events-container th:nth-child(1){
+    width:5%;
+}
+
 .dashboard-events-container th{
     width:25%;
 }
+
+
+
 
 /* Footer */
 footer {

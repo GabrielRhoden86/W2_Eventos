@@ -61,15 +61,12 @@
             <div class="row">
                 @if (session('msg'))
                     <script>
-                     function sweetAlert(){
                         Swal.fire({
                             title: "Evento Criado Com Sucesso !",
                             text: "Verifique os detalhes abaixo",
                             icon: 'success',
                             confirmButtonText: 'Ok'
                         });
-                      }
-                      sweetAlert();
                     </script>
                      {{session('msg') == false}}
                 @endif
