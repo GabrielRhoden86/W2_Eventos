@@ -3,8 +3,8 @@
   @section('content')
 
       <section id="search-container" class="col-md-12">
-          <h3>Busque um Evento</h3>
           <form action="/" method="GET">
+            <label for="search"><h2 >Busque um Evento</h2></label>
               <input type="text" name="search" id="search"class="form-control" placeholder="Procurar...">
           </form>
       </section>
@@ -12,9 +12,9 @@
         @if($search)
         <h3>Buscando por: {{$search}}</h2>
         @else
-        <h3>Proximos Eventos</h2>
+        <h3 class="font-weight-bold text-center">Proximos Eventos</h3>
         @endif
-          <p>{{ count($events) > 0 ? 'Veja os eventos para os proximos dia' : 'Não há eventos disponíveis  ' }}</p>
+          <p class="text-center">{{ count($events) > 0 ? 'Veja os eventos para os proximos dias:' : 'Não há eventos disponíveis  ' }}</p>
           <div id="cards-container" class="row">
               @foreach ($events as $event)
                   <div class="card col">

@@ -17,8 +17,8 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="collapse navbar-collapse" id="navbar">
-                <a class="navbar-brand" href="/">
-                    <img src="/img/hdevents_logo.png" alt="logo">
+                <a href="/">
+                    <h2 class="text-center mb-0 font-weight-bold logo-header">W2</h2>
                 </a>
                 <ul class="navbar-nav">
                     <li class="nav-item">

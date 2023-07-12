@@ -11,12 +11,15 @@ class Event extends Model
 
     protected  $casts = ["items" => "array"];
     protected  $dates = ["date"];
+    protected  $guarded = [];
 
     public function user(){
-        $this->belongsTo('App\Models\Users');
+        $this->belongsTo('App\Models\User');
     }
 
-
+    public function users(){
+        $this->belongsToMany('App\Models\User');
+   }
 }
 
 
